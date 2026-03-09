@@ -2,11 +2,7 @@
 import { test, expect } from '@playwright/test';
 import type { Page } from '@playwright/test';
 
-const BASE_URL = process.env.CURA_BASE_URL;
-
-if (!BASE_URL) {
-  throw new Error('CURA_BASE_URL environment variable is not set');
-}
+const BASE_URL = process.env.CURA_BASE_URL ?? 'https://katalon-demo-cura.herokuapp.com/';
 
 class HomePage {
   /** @param {Page} page */
