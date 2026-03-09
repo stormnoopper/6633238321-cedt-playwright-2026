@@ -12,6 +12,8 @@ jobs:
   test:
     name: Run Playwright tests
     runs-on: ubuntu-latest
+    env:
+      CURA_BASE_URL: https://katalon-demo-cura.herokuapp.com/
 
     steps:
       - name: Checkout repository
